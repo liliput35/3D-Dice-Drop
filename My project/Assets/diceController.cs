@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class diceController : MonoBehaviour
 {
     private Rigidbody rb;
     private bool isDropped = false;
+
+    public Text sideupText ; 
 
     public GameObject side1;
     public GameObject side2;
@@ -59,7 +62,10 @@ public class diceController : MonoBehaviour
                 }
             }
 
+
+            
             currentSide = sideUp;
+            sideupText.text = "landed on: " + currentSide ;
         }
     }
 }
